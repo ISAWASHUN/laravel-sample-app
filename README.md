@@ -1,1 +1,1 @@
-# rails-sample-app
+# RailsのDockerでの環境構築

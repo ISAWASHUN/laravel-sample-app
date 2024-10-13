@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      target: development
+    volumes:
+      - .:/app
+      - bundle_data:/usr/local/bundle
+    ports:
+      - "3000:3000"
+    environment:
+      - RAILS_ENV=development
+    env_file:
+      - .env.development
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  bundle_data:
+  pgdata:

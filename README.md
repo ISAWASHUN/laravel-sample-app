@@ -1,1 +1,0 @@
-# RailsのDockerでの環境構築

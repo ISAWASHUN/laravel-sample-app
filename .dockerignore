@@ -1,8 +1,0 @@
-.git
-.gitignore
-log/*
-tmp/*
-docker-compose.yml
-.env*
-.DS_Store
-node_modules/
